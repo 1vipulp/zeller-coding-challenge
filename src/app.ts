@@ -15,18 +15,6 @@ export class EStore {
     this.hashmap.set(sku, Number(this.hashmap.get(sku) || 0) + 1);
   }
 
-  // removeItem(sku: 'vga' | 'atv' | 'mbp' | 'ipd') {
-  //   if(!this.hashmap.has(sku)) {
-  //     return;
-  //   }
-  //   const availableQuantity: number = this.hashmap.get(sku) ?? 0;
-  //   if (availableQuantity === 1) {
-  //     this.hashmap.delete(sku);
-  //   } else {
-  //     this.hashmap.set(sku, availableQuantity - 1);
-  //   }
-  // }
-
   total() {
     let totalPrice = 0;
     this.hashmap.forEach((quantity: number, item: string) => {
